@@ -1,11 +1,14 @@
 import csv
 
+#Cambiar nombre de archivo CSV al que se desea leer
 with open('datos.csv', 'r') as file:
     csvReader = csv.reader(file)
 
     lang = next(csvReader)
 
     data = list(csvReader)
+
+    #Ejemplo de como iterar la lectura de CSV para formato INI
     '''    
     print(len(lang))
     print(len(data))
@@ -20,11 +23,10 @@ with open('datos.csv', 'r') as file:
     '''
 
     ini = ''
-
     for i in range(2, len(lang)):
         s = '['+lang[i]+']'
-
         ini += s + '\n'
+
         for j in range(len(data)):
             s = str(data[j][1]+'='+data[j][i])
             ini += s
