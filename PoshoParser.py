@@ -26,11 +26,8 @@ with open('datos.csv', 'r') as file:
 
         ini += s + '\n'
         for j in range(len(data)):
-            for k in range(2, len(data[0])):
-                s = str(data[j][1]+'='+data[j][i])
-
-                ini += s
-                break
+            s = str(data[j][1]+'='+data[j][i])
+            ini += s
             ini += '\n'
         
         ini += '\n'
