@@ -43,6 +43,7 @@ with open('datos.csv', 'r') as file:
     print(ini)
     print(enum)
 
+# Cambiar nombre de archivos guardados a nombre deseado
 f = open('newDatos.ini', 'w')
 f.write(ini)
 f.close()
